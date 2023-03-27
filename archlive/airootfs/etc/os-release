@@ -1,0 +1,11 @@
+NAME="WPKG OS"
+PRETTY_NAME="WPKG OS"
+ID=wpkgos
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://wpkg.vercel.app/"
+DOCUMENTATION_URL="https://wpkg.vercel.app/"
+SUPPORT_URL="https://wpkg.vercel.app/"
+BUG_REPORT_URL="https://wpkg.vercel.app"
+PRIVACY_POLICY_URL="https://wpkg.vercel.app"
+LOGO=wpkgos-logo

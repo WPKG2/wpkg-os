@@ -1,0 +1,21 @@
+pkgname=wpkgos-calamares-branding
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='WPKG OS calamares branding'
+arch=('any')
+license=('CUSTOM')
+url='https://wpkg.vercel.app'
+depends=('calamares-git')
+
+SOURCE_DIR=$(readlink -f .)
+
+pre_install() {
+  rm -rf /etc/calamares/*
+}
+
+package() {
+  install -d "$pkgdir/etc/calamares/"
+  cp -r $SOURCE_DIR/modules "$pkgdir/etc/calamares/modules"
+  cp -r $SOURCE_DIR/branding "$pkgdir/etc/calamares/branding"
+  cp -r $SOURCE_DIR/settings.conf "$pkgdir/etc/calamares/settings.conf"
+}

@@ -1,0 +1,25 @@
+pkgname=wpkgos-branding
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='WPKG OS branding'
+arch=('any')
+license=("CUSTOM")
+
+SOURCE_DIR=$(readlink -f .)
+
+#build() {
+#}
+
+package() {
+    #install -d "$pkgdir/usr/lib/wpkg2-cli/"
+    #install -Dm755 $SOURCE_DIR/target/jmods/*.jar "$pkgdir/usr/lib/wpkg2-cli/"
+
+    #install -Dm755 "$SOURCE_DIR/package/aur/usr/bin/wpkg-cli" "$pkgdir/usr/bin/wpkg-cli"
+
+    #install -Dm644 "$SOURCE_DIR/package/share/usr/share/applications/wpkg-cli.desktop" "$pkgdir/usr/share/applications/wpkg-cli.desktop"
+    #install -Dm644 "$SOURCE_DIR/package/share/usr/share/icons/hicolor/scalable/apps/wpkg-cli.svg" "$pkgdir/usr/share/icons/hicolor/scalable/apps/wpkg-cli.svg"
+    install -d "$pkgdir/usr/share/pixmaps"
+    install -d "$pkgdir/usr/share/neofetch/ascii"
+    install -Dm775 $SOURCE_DIR/*.png "$pkgdir/usr/share/pixmaps/"
+    install -Dm775 $SOURCE_DIR/wpkg.txt "$pkgdir/usr/share/neofetch/ascii/"
+}
