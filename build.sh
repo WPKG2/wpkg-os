@@ -14,6 +14,7 @@ compile_packages=(
 
 download_packages=(
     "https://wpkg.vercel.app/download/cli/wpkg2-cli.tar.zst"
+    "https://built-aur.medzik.workers.dev/x86_64/calamares-3.2.49.1-1-x86_64.pkg.tar.xz"
 )
 
 WORKDIR=$TARGET/work
@@ -53,7 +54,8 @@ fi
 echo "Preparing archlive..."
 TARGET_ARCHISO=$TARGET/archlive
 sudo cp -r $ARCHISO $TARGET_ARCHISO
-sudo sed -i "s#REPO_WILL_BE_PLACED_HERE#file://$(readlink -fn $REPODIR)#g" $TARGET_ARCHISO/pacman.conf
+sudo chown -R $USER:$USER $TARGET_ARCHISO
+sed -i "s#REPO_WILL_BE_PLACED_HERE#file://$(readlink -fn $REPODIR)#g" $TARGET_ARCHISO/pacman.conf
 
 echo "Building ISO..."
 sudo mkarchiso -w $WORKDIR -o $OUTDIR $TARGET_ARCHISO

@@ -122,8 +122,10 @@ xfsprogs
 xl2tpd
 zsh
 
+# installer
+calamares
+
 # gnome
-calamares-git
 gnome
 gparted
 gdm
