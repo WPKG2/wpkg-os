@@ -10,11 +10,19 @@ PACKAGES=packages
 compile_packages=(
     "wpkgos-branding"
     "wpkgos-calamares-branding"
+    "wpkgos-schemas-update"
+    "wpkg-backgrounds"
 )
 
 download_packages=(
     "https://wpkg.vercel.app/download/cli/wpkg2-cli.tar.zst"
-    "https://built-aur.medzik.workers.dev/x86_64/calamares-3.2.49.1-1-x86_64.pkg.tar.xz"
+    "https://built-aur.medzik.workers.dev/x86_64/calamares-3.2.49.1-3-x86_64.pkg.tar.xz"
+    "https://built-aur.medzik.workers.dev/x86_64/mangohud-0.6.8-5-x86_64.pkg.tar.xz"
+)
+
+apps=(
+    "wpkgos-apps"
+    "bombelium"
 )
 
 WORKDIR=$TARGET/work
@@ -42,6 +50,17 @@ if [ ! -e $REPODIR ]; then
             ./packages/buildpkg.sh ./packages/$i ./$REPODIR
         else
             echo "Package $i not exists"
+        fi
+    done
+
+    #Building apps
+    echo "Building apps..."
+    for i in "${apps[@]}"
+    do
+        if [ -e ./apps/$i/ ]; then
+            ./packages/buildpkg.sh ./apps/$i/ ./$REPODIR
+        else
+            echo "App $i not exists"
         fi
     done
 

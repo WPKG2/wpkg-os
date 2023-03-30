@@ -1,0 +1,16 @@
+pkgname=wpkgos-schemas-update
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='WPKG schemas update'
+arch=('any')
+license=('CUSTOM')
+url='https://wpkg.vercel.app'
+depends=('gsettings-desktop-schemas')
+
+SOURCE_DIR=$(readlink -f .)
+
+pre_install() {
+  sed -i "s#file:///usr/share/backgrounds/gnome/adwaita-l.webp#file:///usr/share/backgrounds/wpkg/wpkgos.png#g" "/usr/share/glib-2.0/schemas/org.gnome.desktop.background.gschema.xml"
+  sed -i "s#file:///usr/share/backgrounds/gnome/adwaita-d.webp#file:///usr/share/backgrounds/wpkg/wpkgos.png#g" "/usr/share/glib-2.0/schemas/org.gnome.desktop.background.gschema.xml"
+}
+

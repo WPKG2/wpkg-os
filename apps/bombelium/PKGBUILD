@@ -1,0 +1,24 @@
+pkgname=bombelium-benchmark
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='The Spinning Bombelium!'
+arch=('any')
+license=("CUSTOM")
+makedepends=('maven' 'git')
+depends=('java-environment>=17' 'mangohud')
+
+SOURCE_DIR=$(readlink -f ../../)
+
+build() {
+    mvn -f $SOURCE_DIR clean package
+}
+
+package() {
+    install -d "$pkgdir/usr/lib/bombelium/"
+    install -Dm755 $SOURCE_DIR/target/bombelium.jar "$pkgdir/usr/lib/bombelium/bombelium.jar"
+
+    install -Dm755 "$SOURCE_DIR/package/aur/usr/bin/bombelium" "$pkgdir/usr/bin/bombelium"
+
+    install -Dm777 "$SOURCE_DIR/package/share/usr/share/applications/bombelium.desktop" "$pkgdir/usr/share/applications/bombelium.desktop"
+    install -Dm777 "$SOURCE_DIR/package/share/usr/share/icons/hicolor/scalable/apps/bombelium.png" "$pkgdir/usr/share/icons/hicolor/scalable/apps/bombelium.png"
+}

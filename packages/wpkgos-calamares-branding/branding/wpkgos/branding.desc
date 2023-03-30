@@ -5,7 +5,7 @@
 # Additional styling can be done using the stylesheet.qss
 # file, also in the branding directory.
 ---
-componentName:  xerolinux
+componentName:  wpkgos
 
 # This selects between different welcome texts. When false, uses
 # the traditional "Welcome to the %1 installer.", and when true,
@@ -73,16 +73,16 @@ sidebar: widget
 # are visible as buttons there if the corresponding *show* keys
 # are set to "true" (they can also be overridden).
 strings:
-    productName:         XeroLinux
-    shortProductName:    XeroLinux
+    productName:         WPKG OS
+    shortProductName:    WPKG OS
     version:             2022.12
     shortVersion:        2022.12.25
-    versionedName:       XeroLinux
-    shortVersionedName:  XeroLinux
-    bootloaderEntryName: XeroLinux
-    productUrl:          https://xerolinux.xyz/
-    supportUrl:          https://xerolinux.xyz/
-    releaseNotesUrl:     https://forum.xerolinux.xyz/thread-4.html
+    versionedName:       WPKG OS
+    shortVersionedName:  WPKG OS
+    bootloaderEntryName: WPKG OS
+    productUrl:          https://wpkg.vercel.app/
+    supportUrl:          https://wpkg.vercel.app/
+    releaseNotesUrl:     https://wpkg.vercel.app/
 
 # log feature
 

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=WPKG CLI
+Comment=The Spinning Bombelium!
+Exec=bombelium
+Icon=bombelium
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Network;Java;
+StartupWMClass=Bombelium
+Name[pl]=bombelium.desktop

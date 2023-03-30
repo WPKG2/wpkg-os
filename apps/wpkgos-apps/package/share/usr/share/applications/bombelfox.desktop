@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Bombelfox
+Comment=Bombelek browser!
+Exec=bombelfox
+Icon=bombelfox
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Network;Java;
+StartupWMClass=me.wpkg.wpkgos.bombelfox.Bombelfox
+Name[pl]=bombelfox.desktop

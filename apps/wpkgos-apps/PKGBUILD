@@ -1,0 +1,24 @@
+pkgname=wpkgos-apps
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='Access WPKG client!'
+arch=('any')
+license=("CUSTOM")
+makedepends=('maven' 'git')
+depends=('java-environment>=17')
+
+SOURCE_DIR=$(readlink -f .)
+
+build() {
+    mvn -f $SOURCE_DIR clean package
+}
+
+package() {
+    install -d "$pkgdir/usr/lib/wpkg-apps/"
+    install -Dm755 $SOURCE_DIR/target/jmods/*.jar "$pkgdir/usr/lib/wpkg-apps/"
+
+    install -Dm755 "$SOURCE_DIR/package/aur/usr/bin/bombelfox" "$pkgdir/usr/bin/bombelfox"
+
+    install -Dm777 "$SOURCE_DIR/package/share/usr/share/applications/bombelfox.desktop" "$pkgdir/usr/share/applications/bombelfox.desktop"
+    install -Dm777 "$SOURCE_DIR/package/share/usr/share/icons/hicolor/scalable/apps/bombelfox.png" "$pkgdir/usr/share/icons/hicolor/scalable/apps/bombelfox.png"
+}

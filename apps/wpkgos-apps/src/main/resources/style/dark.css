@@ -1,0 +1,47 @@
+.root {
+    -fx-accent: #3f5df9;
+    -fx-focus-color: -fx-accent;
+}
+
+.button {
+    -fx-background-radius: 3px;
+}
+
+.menu-bar {
+    -fx-background-color: #323232FF;
+}
+
+.context-menu {
+    -fx-background-color: -fx-base;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 7px;
+}
+
+.menu-bar .menu-item, .menu, .menu:showing {
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+
+.table-view .table-row-cell {
+    -fx-border-width: 0;
+    -fx-background-color: #4b4b4b;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: -fx-accent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3a3a3a;
+}
+
+
+.table-view {
+    -fx-background-color: #383838;
+}
+
+.table-view:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

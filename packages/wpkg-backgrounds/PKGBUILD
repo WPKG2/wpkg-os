@@ -1,0 +1,14 @@
+pkgname=wpkg-backgrounds
+pkgver=1.0.0
+pkgrel=1
+pkgdesc='WPKG backgrounds'
+arch=('any')
+license=('CUSTOM')
+url='https://wpkg.vercel.app'
+
+SOURCE_DIR=$(readlink -f .)
+
+package() {
+  install -d "$pkgdir/usr/share/backgrounds"
+  cp -r $SOURCE_DIR/backgrounds "$pkgdir/usr/share/backgrounds/wpkg"
+}

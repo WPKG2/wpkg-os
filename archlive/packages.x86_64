@@ -111,7 +111,6 @@ udftools
 usb_modeswitch
 usbmuxd
 usbutils
-vim
 virtualbox-guest-utils-nox
 vpnc
 wireless-regdb
@@ -122,8 +121,18 @@ xfsprogs
 xl2tpd
 zsh
 
-# installer
 calamares
+noto-fonts
+networkmanager
+mangohud
+
+#grub
+os-prober
+
+#serivces
+bluez
+bluez-utils
+avahi
 
 # gnome
 gnome
@@ -136,6 +145,12 @@ xorg-xinit
 # wpkg
 wpkgos-branding
 wpkgos-calamares-branding
+wpkgos-schemas-update
+wpkg-backgrounds
+
+#wpkg apps
 wpkg-cli
+wpkgos-apps
+bombelium-benchmark
 
 

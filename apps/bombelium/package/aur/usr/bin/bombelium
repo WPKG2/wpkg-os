@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mangohud --dlsym /usr/lib/jvm/$(archlinux-java get)/bin/java -jar "/usr/lib/bombelium/bombelium.jar" $@

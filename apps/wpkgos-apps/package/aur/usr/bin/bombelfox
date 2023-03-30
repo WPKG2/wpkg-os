@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/lib/jvm/$(archlinux-java get)/bin/java -p "/usr/lib/wpkg-apps" -m me.wpkg.wpkgos.apps/me.wpkg.wpkgos.bombelfox.Bombelfox $@
