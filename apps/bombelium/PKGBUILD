@@ -7,7 +7,7 @@ license=("CUSTOM")
 makedepends=('maven' 'git')
 depends=('java-environment>=17' 'mangohud')
 
-SOURCE_DIR=$(readlink -f ../../)
+SOURCE_DIR=$(readlink -f .)
 
 build() {
     mvn -f $SOURCE_DIR clean package

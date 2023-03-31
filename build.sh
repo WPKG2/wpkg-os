@@ -18,6 +18,7 @@ download_packages=(
     "https://wpkg.vercel.app/download/cli/wpkg2-cli.tar.zst"
     "https://built-aur.medzik.workers.dev/x86_64/calamares-3.2.49.1-3-x86_64.pkg.tar.xz"
     "https://built-aur.medzik.workers.dev/x86_64/mangohud-0.6.8-5-x86_64.pkg.tar.xz"
+    "https://built-aur.medzik.workers.dev/x86_64/mangohud-common-0.6.8-5-x86_64.pkg.tar.xz"
 )
 
 apps=(

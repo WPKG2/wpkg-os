@@ -17,6 +17,6 @@ fi
 
 cd $TARGET && makepkg -s $OPTIONS && cd ../..
 
-cp $TARGET/*tar* $DIST
+cp -r $TARGET/*.tar* $DIST
 
 rm -r $PWD/target/tmp

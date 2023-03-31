@@ -135,9 +135,24 @@ bluez-utils
 avahi
 
 # gnome
-gnome
-gparted
+gnome-shell
 gdm
+gvfs
+gnome-session
+gnome-control-center
+network-manager-applet
+gnome-text-editor
+gnome-console
+eog
+nautilus
+file-roller
+gnome-music
+gnome-software
+gnome-calendar
+gnome-calculator
+gnome-system-monitor
+
+gparted
 xorg
 xorg-server
 xorg-xinit
