@@ -1,0 +1,14 @@
+pkgname=gsettings-desktop-schemas
+pkgver=45.0.0
+pkgrel=1
+pkgdesc='WPKG backgrounds'
+arch=('any')
+license=('CUSTOM')
+url='https://wpkg.vercel.app'
+
+SOURCE_DIR=$(readlink -f .)
+
+package() {
+  install -d "$pkgdir/usr"
+  cp -r $SOURCE_DIR/usr "$pkgdir/usr"
+}

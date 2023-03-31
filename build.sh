@@ -12,6 +12,7 @@ compile_packages=(
     "wpkgos-calamares-branding"
     "wpkgos-schemas-update"
     "wpkg-backgrounds"
+    "gsettings-desktop-schemas"
 )
 
 download_packages=(
