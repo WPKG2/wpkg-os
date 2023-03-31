@@ -78,4 +78,4 @@ sudo chown -R $USER:$USER $TARGET_ARCHISO
 sed -i "s#REPO_WILL_BE_PLACED_HERE#file://$(readlink -fn $REPODIR)#g" $TARGET_ARCHISO/pacman.conf
 
 echo "Building ISO..."
-sudo mkarchiso -w $WORKDIR -o $OUTDIR $TARGET_ARCHISO
+sudo mkarchiso -v -w $WORKDIR -o $OUTDIR $TARGET_ARCHISO
