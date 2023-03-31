@@ -10,7 +10,6 @@ PACKAGES=packages
 compile_packages=(
     "wpkgos-branding"
     "wpkgos-calamares-branding"
-    "wpkgos-schemas-update"
     "wpkg-backgrounds"
     "gsettings-desktop-schemas"
 )

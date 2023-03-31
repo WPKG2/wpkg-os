@@ -5,10 +5,14 @@ pkgdesc='WPKG backgrounds'
 arch=('any')
 license=('CUSTOM')
 url='https://wpkg.vercel.app'
-
+depends=('rsync'
+	'glib2'
+	'adobe-source-code-pro-fonts'
+	'cantarell-fonts'
+	'dconf')
 SOURCE_DIR=$(readlink -f .)
 
 package() {
-  install -d "$pkgdir/usr"
-  cp -r $SOURCE_DIR/usr "$pkgdir/usr"
+	install -d "$pkgdir/usr"
+	cp -RT "$SOURCE_DIR/usr" "$pkgdir/usr" 
 }

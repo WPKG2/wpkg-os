@@ -160,8 +160,8 @@ xorg-xinit
 # wpkg
 wpkgos-branding
 wpkgos-calamares-branding
-wpkgos-schemas-update
 wpkg-backgrounds
+gsettings-desktop-schemas=45.0.0
 
 #wpkg apps
 wpkg-cli
